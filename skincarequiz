@@ -1,0 +1,51 @@
+def skincare_quiz():
+    print("Welcome to the personalized skincare routine quiz!")
+    name = input("What's your name? ")
+    age = int(input("How old are you? "))
+    skin_type = input("What is your skin type? (Dry/Oily/Combination/Sensitive) ").lower()
+    concerns = input("Do you have any specific skin concerns? (Acne, Aging, Hyperpigmentation, etc.) If not, you can type 'None'. ").lower()
+    routine_level = input("How familiar are you with skincare routines? (Beginner/Intermediate/Advanced) ").lower()
+    
+    print("\nGreat! Let's determine your personalized skincare routine based on your answers.\n")
+    
+    # Determine routine based on skin type and additional details
+    print(f"Hello {name}! Here is your personalized skincare routine:")
+    print("1. Cleanse:")
+    if skin_type == "dry":
+        print("   - Use a hydrating cleanser to avoid stripping natural oils.")
+    elif skin_type == "oily":
+        print("   - Use a foaming or gel-based cleanser to control excess oil.")
+    elif skin_type == "combination":
+        print("   - Use a gentle cleanser suitable for all skin types.")
+    elif skin_type == "sensitive":
+        print("   - Use a fragrance-free, gentle cleanser to avoid irritation.")
+    
+    print("2. Treat:")
+    if concerns != "none":
+        print(f"   - Incorporate products targeting {concerns}.")
+    else:
+        print("   - Use treatments based on your skin's needs, such as serums or spot treatments.")
+    
+    print("3. Hydrate:")
+    if age >= 30:
+        print("   - Consider using products with anti-aging ingredients like retinol or peptides.")
+    if skin_type == "dry" or skin_type == "combination":
+        print("   - Apply a rich moisturizer to hydrate dry areas.")
+    elif skin_type == "oily":
+        print("   - Use a lightweight, oil-free moisturizer.")
+    elif skin_type == "sensitive":
+        print("   - Opt for a hypoallergenic, fragrance-free moisturizer.")
+    
+    print("4. Protect:")
+    if routine_level == "beginner":
+        print("   - Use a broad-spectrum sunscreen with at least SPF 30 daily.")
+    elif routine_level == "intermediate":
+        print("   - Use sunscreen daily and reapply every 2 hours when outdoors.")
+    elif routine_level == "advanced":
+        print("   - Use sunscreen daily, reapply every 2 hours, and consider additional protection like hats or clothing.")
+    
+    print("\nRemember to patch-test new products and introduce one at a time to avoid irritation.")
+    print("For personalized advice, consult with a dermatologist.")
+
+# Run the quiz
+skincare_quiz()
